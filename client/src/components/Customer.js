@@ -4,8 +4,8 @@ import { render } from '@testing-library/react';
 function Customer (props){
     return (
         <div>
-            <CustomerProfile image = {props.image} id = {props.id}/>
-            <CustomerInfo name = {props.name} birthday = {props.birthday} gender = {props.gender} job = {props.job}/>
+            {/* <CustomerProfile image = {props.image} id = {props.id}/> */}
+            <CustomerInfo name = {props.name} position = {props.position} id = {props.id}/>
         </div>
        
     )
@@ -30,13 +30,10 @@ function CustomerInfo(props){
     return (
             <div>
                 <h2 onClick={() => {test('123')}} style={{cursor:'pointer'}}>{props.name}</h2>
-                <p>{props.birthday}</p>
-                <p>{props.gender}</p>
-                <p>{props.job}</p>
+                <p>{props.position}</p>
+                <p>{props.id}</p>
             </div>
     )
-    
 }
-
 
 export default Customer
